@@ -9,7 +9,7 @@ class ContactsService {
     private $contactsGateway    = NULL;
     
     private function openDb() {
-        if (!mysql_connect("localhost", "root", "")) {
+        if (!mysql_connect("antip.mysql.database.azure.com", "antip@antip", "9361806AbA")) {
             throw new Exception("Connection to the database server failed!");
         }
         if (!mysql_select_db("contacts")) {
